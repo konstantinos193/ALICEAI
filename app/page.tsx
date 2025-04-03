@@ -202,8 +202,8 @@ export default function Home() {
         {/* Buy Syn Button */}
         <div className="absolute top-6 right-6 z-30">
           <button 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg buy-button-pulse hover:animate-none transition-all duration-300 uppercase text-sm tracking-wider"
-            onClick={() => window.open('https://odin.fun/token/2emh', '_blank')}
+            className="bg-gradient-to-r from-blue-600/50 to-purple-600/50 text-white/70 font-bold py-3 px-8 rounded-full shadow-lg uppercase text-sm tracking-wider cursor-not-allowed"
+            disabled
           >
             Buy Syn
           </button>
