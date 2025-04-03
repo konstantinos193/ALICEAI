@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ALICE - ODINFUN AI Agent",
+  title: "Syn - ODINFUN AI Agent",
   description: "First BTC AI agent made by Grok 3 Technology",
   generator: 'v0.dev',
   icons: {

@@ -68,12 +68,12 @@ export default function Home() {
       { y: canvas.height * 0.25, color: "#FFFFFF", direction: -1, speed: 0.09, width: 1.0 },
       { y: canvas.height * 0.29, color: "#4285F4", direction: 1, speed: 0.10, width: 1.2 },
       
-      // Middle area (near Alice's head)
+      // Middle area (near SYN's head)
       { y: canvas.height * 0.34, color: "#34A853", direction: 1, speed: 0.07, width: 1.0 },
       { y: canvas.height * 0.39, color: "#4285F4", direction: 1, speed: 0.11, width: 1.0 },
       { y: canvas.height * 0.44, color: "#FFFFFF", direction: -1, speed: 0.08, width: 1.0 },
       
-      // Position around ALICE text
+      // Position around SYN text
       { y: canvas.height * 0.49, color: "#FFFFFF", direction: -1, speed: 0.10, width: 1.0 },
       { y: canvas.height * 0.56, color: "#4285F4", direction: 1, speed: 0.09, width: 1.1 },
       
@@ -199,12 +199,13 @@ export default function Home() {
 
       {/* Interface with rounded corners - exact match to the current screenshot */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto h-screen">
-        {/* Buy Alice Button */}
+        {/* Buy Syn Button */}
         <div className="absolute top-6 right-6 z-30">
           <button 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-2 px-6 rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-300"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg buy-button-pulse hover:animate-none transition-all duration-300 uppercase text-sm tracking-wider"
+            onClick={() => alert('Coming soon!')}
           >
-            Buy Alice
+            Buy Syn
           </button>
         </div>
         
@@ -226,13 +227,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ALICE Title - positioned at the center */}
+        {/* Syn Title - positioned at the center */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center text-center">
-          <h1 className="text-white text-9xl font-bold tracking-tighter">ALICE</h1>
+          <h1 className="text-white text-9xl font-bold tracking-tighter">SYN</h1>
 
           {/* Description text - smaller and more condensed as in the screenshot */}
           <p className="text-white text-center uppercase tracking-wide text-[8px] font-medium leading-tight max-w-[250px] mt-1">
-            FIRST BTC AI AGENT MADE BY GROK 3 TECHNOLOGY.<br/>
+            FIRST ODIN.FUN AI AGENT MADE BY GROK 3 TECHNOLOGY.<br/>
             OUR PURPOSE IS TO MAKE WORKING WITH DATA EASIER,<br/>
             FASTER, AND MORE EFFICIENT.
           </p>
@@ -242,7 +243,7 @@ export default function Home() {
         <div className="absolute right-[-10%] bottom-0 h-[95vh] z-10">
           <Image
             src="https://i.postimg.cc/mg2XMBs4/logo-removebg-preview-1.png"
-            alt="ALICE AI Character"
+            alt="Syn AI Character"
             width={700}
             height={900}
             priority
@@ -254,7 +255,7 @@ export default function Home() {
         <div className="absolute left-2 w-[330px] top-[80px] bg-black/90 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden z-20 shadow-2xl flex flex-col h-[620px]">
           {/* Chat header */}
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 px-5 py-3 border-b border-white/20 flex items-center">
-            <h3 className="text-white font-medium text-sm">ALICE - ODINFUN AI Assistant</h3>
+            <h3 className="text-white font-medium text-sm">SYN - ODINFUN AI Assistant</h3>
           </div>
           
           {/* Chat messages area - fixed height */}
@@ -263,7 +264,7 @@ export default function Home() {
             className="flex-1 p-4 overflow-y-auto h-[520px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent relative"
           >
             {messages.length === 0 ? (
-              <p className="text-white/70 text-sm italic">Hey there! I'm ALICE, your BTC AI Agent. How can I help you with your data today? 💼</p>
+              <p className="text-white/70 text-sm italic">Hey there! I'm Syn, your odin.fun AI Agent. How can I help you with your data today? 💼</p>
             ) : (
               messages.map((msg, index) => (
                 <div 
@@ -275,7 +276,7 @@ export default function Home() {
                   } p-3 rounded-lg shadow-md mb-3 break-words`}
                 >
                   {msg.role === "user" && <div className="text-xs text-blue-300/70 mb-1 font-medium">You</div>}
-                  {msg.role === "assistant" && <div className="text-xs text-purple-300/70 mb-1 font-medium">ALICE</div>}
+                  {msg.role === "assistant" && <div className="text-xs text-purple-300/70 mb-1 font-medium">SYN</div>}
                   <p className="text-white leading-relaxed text-sm">{msg.content}</p>
                 </div>
               ))
