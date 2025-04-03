@@ -199,6 +199,15 @@ export default function Home() {
 
       {/* Interface with rounded corners - exact match to the current screenshot */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto h-screen">
+        {/* Buy Alice Button */}
+        <div className="absolute top-6 right-6 z-30">
+          <button 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-2 px-6 rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-300"
+          >
+            Buy Alice
+          </button>
+        </div>
+        
         <div className="absolute inset-x-5 inset-y-5 rounded-[40px] border border-white/10 overflow-hidden z-0">
           {/* This creates the rounded container visible in the image */}
         </div>
