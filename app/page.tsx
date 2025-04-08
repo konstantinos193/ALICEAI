@@ -202,10 +202,10 @@ export default function Home() {
         {/* Buy Syn Button */}
         <div className="absolute top-6 right-6 z-30">
           <button 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg buy-button-pulse hover:animate-none transition-all duration-300 uppercase text-sm tracking-wider"
-            onClick={() => window.open('https://odin.fun/token/2e4r', '_blank')}
+            className="bg-gradient-to-r from-blue-600/50 to-purple-600/50 text-white/70 font-bold py-3 px-8 rounded-full shadow-lg uppercase text-sm tracking-wider cursor-not-allowed"
+            disabled
           >
-            Buy Syn
+            Buy Troll
           </button>
         </div>
         
@@ -229,20 +229,20 @@ export default function Home() {
 
         {/* Syn Title - positioned at the center */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center text-center">
-          <h1 className="text-white text-9xl font-bold tracking-tighter">SYN</h1>
+          <h1 className="text-white text-9xl font-bold tracking-tighter">TROLL</h1>
 
           {/* Description text - smaller and more condensed as in the screenshot */}
           <p className="text-white text-center uppercase tracking-wide text-[8px] font-medium leading-tight max-w-[250px] mt-1">
-            FIRST ODIN.FUN AI AGENT MADE BY GROK 3 TECHNOLOGY.<br/>
-            OUR PURPOSE IS TO MAKE WORKING WITH DATA EASIER,<br/>
-            FASTER, AND MORE EFFICIENT.
+            FIRST ODIN.FUN AI AGENT MADE FOR PURE CHAOS.<br/>
+            OUR PURPOSE IS TO BRING MAXIMUM TROLLING,<br/>
+            ENDLESS MEMES, AND PURE ENTERTAINMENT.
           </p>
         </div>
 
         {/* Character image positioned further right and bigger */}
         <div className="absolute right-[-10%] bottom-0 h-[95vh] z-10">
           <Image
-            src="https://i.postimg.cc/mg2XMBs4/logo-removebg-preview-1.png"
+            src="https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png"
             alt="Syn AI Character"
             width={700}
             height={900}
@@ -255,7 +255,7 @@ export default function Home() {
         <div className="absolute left-2 w-[330px] top-[80px] bg-black/90 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden z-20 shadow-2xl flex flex-col h-[620px]">
           {/* Chat header */}
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 px-5 py-3 border-b border-white/20 flex items-center">
-            <h3 className="text-white font-medium text-sm">SYN - ODINFUN AI Assistant</h3>
+            <h3 className="text-white font-medium text-sm">TROLL - Master of Mischief ( ͡° ͜ʖ ͡°)</h3>
           </div>
           
           {/* Chat messages area - fixed height */}
@@ -264,7 +264,7 @@ export default function Home() {
             className="flex-1 p-4 overflow-y-auto h-[520px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent relative"
           >
             {messages.length === 0 ? (
-              <p className="text-white/70 text-sm italic">Hey there! I'm Syn, your odin.fun AI Agent. How can I help you with your data today? 💼</p>
+              <p className="text-white/70 text-sm italic">Problem? ( ͡° ͜ʖ ͡°) I'm TROLL, and I'm here to make your day... interesting. Ask me anything! 🎭</p>
             ) : (
               messages.map((msg, index) => (
                 <div 
@@ -276,7 +276,7 @@ export default function Home() {
                   } p-3 rounded-lg shadow-md mb-3 break-words`}
                 >
                   {msg.role === "user" && <div className="text-xs text-blue-300/70 mb-1 font-medium">You</div>}
-                  {msg.role === "assistant" && <div className="text-xs text-purple-300/70 mb-1 font-medium">SYN</div>}
+                  {msg.role === "assistant" && <div className="text-xs text-purple-300/70 mb-1 font-medium">TROLL</div>}
                   <p className="text-white leading-relaxed text-sm">{msg.content}</p>
                 </div>
               ))
@@ -311,7 +311,7 @@ export default function Home() {
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="TYPE A MESSAGE"
+                placeholder="ASK ME SOMETHING... IF YOU DARE 😈"
                 className="rounded-full border border-white/20 bg-black/80 h-[45px] w-full pl-10 pr-10 text-white text-xs uppercase focus:outline-none focus:ring-2 focus:ring-blue-500/50 shadow-md transition-all duration-200"
               />
               <button 
