@@ -199,11 +199,11 @@ export default function Home() {
 
       {/* Interface with rounded corners - exact match to the current screenshot */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto h-screen">
-        {/* Buy Syn Button */}
+        {/* Buy Troll Button */}
         <div className="absolute top-6 right-6 z-30">
           <button 
-            className="bg-gradient-to-r from-blue-600/50 to-purple-600/50 text-white/70 font-bold py-3 px-8 rounded-full shadow-lg uppercase text-sm tracking-wider cursor-not-allowed"
-            disabled
+            onClick={() => window.open('https://odin.fun/token/2ex6', '_blank')}
+            className="bg-gradient-to-r from-blue-600/100 to-purple-600/100 text-white font-bold py-3 px-8 rounded-full shadow-lg uppercase text-sm tracking-wider hover:scale-105 transition-all duration-200"
           >
             Buy Troll
           </button>
@@ -307,7 +307,7 @@ export default function Home() {
               onSubmit={handleSendMessage}
               className="relative flex items-center"
             >
-              <input
+              <inputhttps://odin.fun/token/2ex6
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
