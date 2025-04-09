@@ -202,7 +202,7 @@ export default function Home() {
         {/* Buy Troll Button */}
         <div className="absolute top-6 right-6 z-30">
           <button 
-            onClick={() => window.open('https://odin.fun/token/2ex6', '_blank')}
+            onClick={() => window.open('https://odin.fun/token/2ezs', '_blank')}
             className="bg-gradient-to-r from-blue-600/100 to-purple-600/100 text-white font-bold py-3 px-8 rounded-full shadow-lg uppercase text-sm tracking-wider hover:scale-105 transition-all duration-200"
           >
             Buy Troll
@@ -307,7 +307,7 @@ export default function Home() {
               onSubmit={handleSendMessage}
               className="relative flex items-center"
             >
-              <inputhttps://odin.fun/token/2ex6
+              <inputhttps://odin.fun/token/2ezs
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
