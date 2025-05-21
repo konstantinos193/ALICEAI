@@ -2,97 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  /* Custom pulse animation for the Buy button */
-  .buy-button-pulse {
-    animation: buyButtonPulse 2s infinite;
-  }
-
-  @keyframes buyButtonPulse {
-    0%, 100% {
-      transform: scale(1);
-      box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
-    }
-    50% {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
-    }
-  }
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -109,85 +18,110 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-/* Ensure the canvas covers the entire screen */
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+/* Code syntax highlighting */
+.syntax-highlight {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  line-height: 1.5;
 }
 
-/* Main content area styling */
-h1 {
-  letter-spacing: -4px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  font-size: 7rem;
+.syntax-highlight .keyword {
+  color: #569cd6; /* blue */
 }
 
-/* Chat input styling to match the screenshot exactly */
-.rounded-full {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.syntax-highlight .function {
+  color: #dcdcaa; /* yellow */
 }
 
-/* Make the text input match the screenshot */
-.rounded-full span {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.5px;
+.syntax-highlight .string {
+  color: #ce9178; /* orange-red */
 }
 
-/* Style for the rounded container to match the screenshot */
-.rounded-\[40px\] {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.1) !important;
+.syntax-highlight .number {
+  color: #b5cea8; /* light green */
 }
 
-/* Background color to match the screenshot exactly */
-main {
-  background: black;
+.syntax-highlight .comment {
+  color: #6a9955; /* green */
+  font-style: italic;
 }
 
-/* Mic button styling */
-.rounded-full .rounded-full {
-  border: none;
-  background-color: transparent !important;
-  box-shadow: none;
+.syntax-highlight .operator {
+  color: #d4d4d4; /* light gray */
 }
 
-/* Text styling */
-p {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  line-height: 1.4;
-  letter-spacing: 0.05em;
+.syntax-highlight .punctuation {
+  color: #d4d4d4; /* light gray */
 }
 
-/* Icon styling */
-.plus-icon {
-  opacity: 0.5;
+.syntax-highlight .class-name {
+  color: #4ec9b0; /* teal */
 }
 
-/* Character image styling */
-.character-image {
-  object-position: right center;
-  transform: translateX(10%);
+.syntax-highlight .builtin {
+  color: #569cd6; /* blue */
 }
 
+.syntax-highlight .property {
+  color: #9cdcfe; /* light blue */
+}
+
+.syntax-highlight .variable {
+  color: #9cdcfe; /* light blue */
+}
+
+.syntax-highlight .type {
+  color: #4ec9b0; /* teal */
+}
+
+.syntax-highlight .tag {
+  color: #569cd6; /* blue */
+}
+
+.syntax-highlight .attr-name {
+  color: #9cdcfe; /* light blue */
+}
+
+.syntax-highlight .attr-value {
+  color: #ce9178; /* orange-red */
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 640px) {
+  pre {
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .syntax-highlight {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* Improve tap targets on mobile */
+  button,
+  a {
+    min-height: 36px;
+    min-width: 36px;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improve code block readability on small screens */
+@media (max-width: 480px) {
+  pre {
+    padding: 0.75rem !important;
+  }
+
+  .syntax-highlight {
+    font-size: 0.8rem;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+}

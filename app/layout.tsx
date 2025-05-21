@@ -6,14 +6,15 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TROLL - ODINFUN AI Prankster",
-  description: "FIRST ODIN.FUN AI AGENT MADE FOR PURE CHAOS. OUR PURPOSE IS TO BRING MAXIMUM TROLLING, ENDLESS MEMES, AND PURE ENTERTAINMENT.",
-  generator: 'v0.dev',
+  title: "OdinDev Assistant - AI-powered help for Odin.Fun developers",
+  description:
+    "Get instant answers to your Odin.Fun development questions with our AI-powered assistant. Learn about Runes protocol, Bitcoin integration, token creation, and trading.",
+  generator: "v0.dev",
   icons: {
-    icon: 'https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png',
-    shortcut: 'https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png',
-    apple: 'https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png',
-  }
+    icon: "/images/odin-logo.png",
+    shortcut: "/images/odin-logo.png",
+    apple: "/images/odin-logo.png",
+  },
 }
 
 export default function RootLayout({
@@ -24,8 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png" />
-        <link rel="apple-touch-icon" href="https://i.postimg.cc/Fskwnf49/image-2025-04-08-180448136-removebg-preview.png" />
+        <link rel="icon" href="/images/odin-logo.png" />
+        <link rel="apple-touch-icon" href="/images/odin-logo.png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
